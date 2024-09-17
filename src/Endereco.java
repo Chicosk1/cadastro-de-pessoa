@@ -3,7 +3,7 @@ class Endereco {
     private String numeroEndereco;
     private String cidadeEndereco;
 
-    // Setter para definir os dados do endereço
+    // Construtor para definir os dados do endereço
     public void setEnderecoPessoa(String ruaEndereco, String numeroEndereco, String cidadeEndereco) {
         this.ruaEndereco = ruaEndereco;
         this.numeroEndereco = numeroEndereco;
