@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
         Scanner scannerPessoa = new Scanner(System.in);
-        ArrayList<Pessoa> listaPessoas = new ArrayList<>(); // Lista para armazenar as pessoas
+        ArrayList<Pessoa> listaPessoas = new ArrayList<>();
 
         String opcao;
         do {
@@ -15,7 +15,8 @@ public class Main {
             pessoa.setNomePessoa(scannerPessoa.nextLine());
             System.out.print("Informe a idade da pessoa: ");
             pessoa.setIdadePessoa(scannerPessoa.nextInt());
-            scannerPessoa.nextLine(); // Consumir a nova linha pendente
+            
+            scannerPessoa.nextLine(); // Consumir uma linha
 
             // Coletando dados do endereço
             System.out.print("Informe a rua da casa da pessoa: ");
@@ -28,10 +29,8 @@ public class Main {
             endereco.setEnderecoPessoa(rua, numero, cidade);
             pessoa.setEnderecoPessoa(endereco);
 
-            // Adicionando a pessoa à lista
             listaPessoas.add(pessoa);
 
-            // Perguntar se deseja adicionar outra pessoa
             System.out.print("Deseja adicionar outra pessoa? (s/n): ");
             opcao = scannerPessoa.nextLine();
         } while (opcao.equalsIgnoreCase("s"));
@@ -45,7 +44,6 @@ public class Main {
             System.out.println("-----------------------------");
         }
 
-        // Fechamento do Scanner
         scannerPessoa.close();
     }
 }
