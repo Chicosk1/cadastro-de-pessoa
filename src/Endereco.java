@@ -10,7 +10,7 @@ class Endereco {
         this.cidadeEndereco = cidadeEndereco;
     }
 
-    // Getter para obter os dados do endereço
+    // Getters
     public String getRuaEndereco() {
         return ruaEndereco;
     }
@@ -23,7 +23,6 @@ class Endereco {
         return cidadeEndereco;
     }
 
-    // Getter para obter o endereço completo
     public String getEnderecoCompletoPessoa() {
         return ruaEndereco + ", " + numeroEndereco + " - " + cidadeEndereco;
     }
